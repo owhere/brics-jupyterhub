@@ -1,0 +1,7 @@
+*.sif
+*.log
+*.pid
+*.sqlite
+
+*_secret
+.env
