@@ -5,5 +5,6 @@
 
 singularity exec \
   --bind config:/srv/jupyterhub:rw \
+  --bind notebooks:/tmp/admin/notebooks:rw \
   brics_jupyterhub.sif \
   jupyterhub -f /srv/jupyterhub/jupyterhub_config.py > jupyterhub.log 2>&1

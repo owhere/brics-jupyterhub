@@ -23,15 +23,13 @@ logger.info("Using NoPasswordPAMAuthenticator for passwordless access")
 # Log the final authenticator setup
 logger.info("Assigned NoPasswordPAMAuthenticator")
 
+# URL config
 c.ConfigurableHTTPProxy.api_url = 'http://127.0.0.1:8018'
 c.JupyterHub.bind_url = 'http://127.0.0.1:38024'
 
-
-
-# Simple spawner to start single-user servers
+# Spawner settings
 c.JupyterHub.spawner_class = 'jupyterhub.spawner.SimpleLocalProcessSpawner'
-# Spawner configuration to use the virtual environment
-c.Spawner.cmd = ['']
+c.Spawner.default_url = '/lab'
+c.Spawner.notebook_dir = '~/notebooks'
 
-# Logging level
 c.JupyterHub.log_level = 'DEBUG'

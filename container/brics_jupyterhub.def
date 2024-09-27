@@ -13,7 +13,8 @@ From: jupyterhub/jupyterhub:5.1.0
         python3-dev \
         git
 
-    # Install Python dependencies, including the DummyAuthenticator
+    # Install Python dependencies, including JupyterLab 
+    pip install --no-cache-dir jupyterlab  
     pip install --no-cache-dir python-dotenv jupyterhub-dummyauthenticator
 
 %runscript
