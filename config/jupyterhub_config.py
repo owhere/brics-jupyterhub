@@ -8,6 +8,8 @@ from dummyauthenticator import DummyAuthenticator
 c.JupyterHub.authenticator_class = DummyAuthenticator
 c.Authenticator.admin_users = {'admin'}
 c.Authenticator.allowed_users = {'admin'}
+c.LocalAuthenticator.create_system_users = True
+
 
 c = get_config()
 
@@ -26,6 +28,8 @@ logger.info("Assigned NoPasswordPAMAuthenticator")
 # URL config
 c.ConfigurableHTTPProxy.api_url = 'http://127.0.0.1:8018'
 c.JupyterHub.bind_url = 'http://127.0.0.1:38024'
+c.JupyterHub.hub_connect_ip = '127.0.0.1'
+c.JupyterHub.base_url = '/'
 
 # Spawner settings
 c.JupyterHub.spawner_class = 'jupyterhub.spawner.SimpleLocalProcessSpawner'
