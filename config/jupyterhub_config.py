@@ -10,9 +10,6 @@ c.Authenticator.admin_users = {'admin'}
 c.Authenticator.allowed_users = {'admin'}
 c.LocalAuthenticator.create_system_users = True
 
-
-c = get_config()
-
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
